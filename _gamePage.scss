@@ -1,0 +1,121 @@
+@import "variables";
+
+.boardDiv {
+  min-height: 90vmin;
+  min-width: 90vmin;
+
+  background-color: $lighter;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  border-radius: 10px;
+  grid-gap: 6px;
+}
+
+#tttLogo {
+  margin-bottom: 15%;
+}
+
+.cells {
+  height: 100%;
+  width: 100%;
+  background-color: $darker;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  font-size: 9rem;
+  position: relative;
+
+  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.cell:nth-of-type(1) {
+  border-radius: 10px 0 0 0;
+}
+.cell:nth-of-type(3) {
+  border-radius: 0 10px 0 0;
+}
+.cell:nth-of-type(9) {
+  border-radius: 0 0 10px 0;
+}
+.cell:nth-of-type(7) {
+  border-radius: 0 0 0 10px;
+}
+
+#playersDiv {
+  margin-top: 20%;
+  height: 20%;
+  width: 20%;
+  height: 20vmin;
+  min-width: 90vmin;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: $radius;
+}
+
+#xPlayer,
+#oPlayer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $lighter;
+  height: 20%;
+  width: 30%;
+  font-size: 6em;
+  padding: 1em;
+  border-radius: $radius;
+  color: $darker;
+  text-align: center;
+}
+
+#blackDiv {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 1;
+}
+
+#winDiv {
+  height: 60vmin;
+  width: 90vmin;
+  background-color: #f6f7be;
+  border-radius: $radius;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 6rem;
+  color: $darker;
+
+  p {
+    padding: 10px;
+  }
+
+  button {
+    margin-top: 5%;
+    padding: 10px 50px;
+    border: none;
+    background-color: $darker;
+    color: $lighter;
+    border-radius: $radius;
+  }
+}
+
+.red {
+  color: red;
+}
+
+.blue {
+  color: blue;
+}

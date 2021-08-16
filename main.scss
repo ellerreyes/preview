@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+@import "variables";
+@import "gamePage";
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+
+  /*base styles */
+  text-decoration: none;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $background;
+  height: 100vh;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/************ firstPage *************/
+#mainDiv {
+  height: 80vh;
+  width: 100%;
+  margin-top: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#tttLogo {
+  height: fit-content;
+}
+
+#chooseMarkDiv {
+  width: 85%;
+  min-height: 12%;
+  text-align: center;
+  background-color: $lighter;
+  padding: 1.5rem;
+  padding-top: 3rem;
+  border-radius: $radius;
+  color: $darker;
+  font-size: 2.5rem;
+  margin-top: -10%;
+
+  #marksDiv {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 2rem;
+
+    #xBtn,
+    #oBtn {
+      font-size: 2.5rem;
+      color: $lighter;
+      width: 20%;
+      background-color: $darker;
+      padding: 1.5rem;
+      border-radius: $radius;
+      text-align: center;
+      border: none;
+    }
+  }
+}
+
+#startGameBtn {
+  font-size: 3rem;
+  color: $lighter;
+  padding: 2rem;
+  border-radius: $radius;
+  background-color: $darker;
+  width: 94%;
+  text-align: center;
+  margin-bottom: 15%;
+  border: none;
+}
+
+#tttDiv {
+  width: 80%;
+  font-size: 3rem;
+  color: $darker;
+  padding: 2rem;
+  border: 6px solid $darker;
+  border-radius: $radius;
+  background-color: $lighter;
+  text-align: center;
+  margin-top: 10%;
+  margin-bottom: -5%;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  #mainDiv {
+    height: 80vh;
+    margin-top: 10%;
+  }
+}
